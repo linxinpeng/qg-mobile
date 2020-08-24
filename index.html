@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
@@ -12,10 +13,35 @@
     <title>青瓜传媒</title>
     <link rel="stylesheet" href="./css/reset.css">
     <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
 </head>
+
 <body>
     <div class="home-wrap">
         页面盒子
     </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+    <script>
+        $(function () {
+            $('.home-wrap').off('click').on('click', function () {
+                $.actions({
+                    actions: [{
+                        text: "编辑",
+                        onClick: function () {
+                            //do something
+                        }
+                    }, {
+                        text: "删除",
+                        onClick: function () {
+                            //do something
+                        }
+                    }]
+                });
+            })
+        })
+    </script>
 </body>
+
 </html>
