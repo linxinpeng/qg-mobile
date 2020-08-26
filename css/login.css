@@ -1,0 +1,26 @@
+.login-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 38px;
+}
+.login-inputs{
+    width: 100%;
+    margin-top: 56px;
+}
+.input__wrap{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.46rem;
+}
+.input__wrap .tips{
+    width: 2.3rem;
+    font-size: 0.32rem;
+    color: #333;
+    text-align: center;
+}
+.input__wrap input{
+    padding-left: 0.2rem;
+}
