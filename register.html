@@ -10,7 +10,7 @@
     <meta content="email=no" name="format-detection">
     <meta name="description" content="这是网站的描述，填写有助于SEO" />
     <meta name="keywords" content="这是网站关键词" />
-    <title>登录</title>
+    <title>注册</title>
 
     <script type="text/javascript" src="./js/flexible.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
@@ -32,6 +32,11 @@
                 <input class="phone" type="tel" placeholder="请输入手机号码" maxlength="11" />
             </div>
             <div class="input__wrap">
+                <span class="tips">验证码</span>
+                <input class="vrCode" placeholder="请输入验证码" maxlength="6" />
+                <span class="get-code">获取验证码</span>
+            </div>
+            <div class="input__wrap">
                 <span class="tips">密&nbsp;&nbsp;&nbsp;码</span>
                 <input class="password" placeholder="请输入密码" type="password" maxlength="8" />
                 <span class="input__wrap-eye">
@@ -39,10 +44,9 @@
                     <img class="is-none" data-img="open" src="./images/eye-open.png" />
                 </span>
             </div>
-            <button class="btn-other btn un-input btn-login">登录</button>
-            <div class="other-actions">
-                <a class="forget-password" href="./forget.html">忘记密码？</a>
-                <a class="phone-register" href="./register.html">手机号注册></a>
+            <button class="btn-other btn un-input btn-login">注册</button>
+            <div class="other-actions" style="justify-content: center;">
+                <a href="./login.html" style="color: rgba(46, 183, 158, 1)">已有账号，去登录></a>
             </div>
         </div>
         <div class="dividing-line line-space" data-text="微信账号登录"></div>
@@ -56,12 +60,22 @@
             let showPassword = false;
             let hasInputPhone = false;
             let hasInputPassword = false;
+            let hasInputvrCode = false;
             let phone = '';
             let password = '';
+            let vrCode = '';
+            let time = 60;
+            let timer = null;
 
             $('.phone', '.login-inputs').off('input').on('input', function () {
                 phone = $(this).val();
                 hasInputPhone = phone ? true : false
+                canLogin()
+            })
+
+            $('.vrCode', '.login-inputs').off('input').on('input', function () {
+                vrCode = $(this).val();
+                hasInputvrCode = vrCode ? true : false
                 canLogin()
             })
 
@@ -72,24 +86,38 @@
             })
 
             //微信号登录
-            $('.wechat','.login-wrap').off('click').on('click',function(){
+            $('.wechat', '.login-wrap').off('click').on('click', function () {
                 //dosome
             })
 
             //登录按钮点击事件
-            $('.btn-login','.login-inputs').off('click').on('click',function(){
-                if(hasInputPhone && hasInputPassword){
-                    console.log(phone,password)
+            $('.btn-login', '.login-inputs').off('click').on('click', function () {
+                if (hasInputPhone && hasInputPassword && hasInputvrCode) {
+                    console.log(phone, password ,vrCode)
                 }
             })
 
             function canLogin() {
-                if (hasInputPhone && hasInputPassword) {
+                if (hasInputPhone && hasInputPassword && hasInputvrCode) {
                     $('.btn-other').removeClass('un-input')
                 } else {
                     $('.btn-other').addClass('un-input')
                 }
             }
+            //短信倒计时
+            $('.get-code').off('click').on('click', function () {
+                if (time !== 60) return;
+                timer = window.setInterval(() => {
+                    if (time === 0) {
+                        time = 60;
+                        $(this).text('获取验证码')
+                        clearInterval(timer)
+                    } else {
+                        $(this).text(time + 's')
+                        time--;
+                    }
+                }, 1000);
+            })
 
             //显示密码
             $('.input__wrap-eye', '.login-inputs').off('click').on('click', function () {

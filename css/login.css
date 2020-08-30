@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 38px;
+    padding: 1rem 0.76rem;
 }
 .login-inputs{
     width: 100%;
     margin-top: 56px;
+}
+.login-logo img{
+    width: 3.66rem;
 }
 .input__wrap{
     display: flex;
@@ -16,11 +19,42 @@
     margin-bottom: 0.46rem;
 }
 .input__wrap .tips{
-    width: 2.3rem;
+    width: 1rem;
     font-size: 0.32rem;
+    white-space: nowrap;
     color: #333;
-    text-align: center;
+}
+.input__wrap .get-code{
+    font-size: 0.28rem;
+    white-space: nowrap;
+    color: #2EB79E;
+    margin-left: auto;
 }
 .input__wrap input{
-    padding-left: 0.2rem;
+    padding-left: 0.2rem; 
+    width: 60%;
+}
+.input__wrap-eye{
+    margin-left: auto;
+}
+.input__wrap-eye img{
+    width: 0.32rem;
+}
+.other-actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.24rem;
+}
+.other-actions a{
+    font-size: 0.28rem;
+    color: #999999;
+}
+.other-actions a.phone-register{
+   color: rgba(46, 183, 158, 1)
+}
+.wechat{
+    margin-top: 0.6rem;
+}
+.wechat img{
+    width: 1.28rem;
 }

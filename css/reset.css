@@ -1,9 +1,9 @@
 body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,hr,thead,tbody,tfoot,th,td{margin:0;padding:0;}
 ul,ol{list-style:none;}
-a{text-decoration:none;}
+a{text-decoration:none;-webkit-tap-highlight-color: transparent;}
 html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;}
 body{line-height:1.5; font-size:14px;}
-body,button,input,select,textarea{font-family:'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+body,button,input,select,textarea{font-family:'PingFangSC-Regular','PingFang SC',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
 b,strong{font-weight:bold;}
 i,em{font-style:normal;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -29,6 +29,7 @@ input{
     border: none;
     color:rgba(51,51,51,1);
     font-size:0.32rem;
+    background: transparent;
 }
 
 input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -52,5 +53,10 @@ select{
     font-size:0.32rem;
     color:rgba(51,51,51,1);
     outline: none;
-    width: 2.3rem;
+    width: 1rem;
+    background-color: transparent;
+}
+button{
+    border: none;
+    outline: none;
 }
