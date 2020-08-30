@@ -1,0 +1,39 @@
+.search-list{
+    padding: .3rem;
+    background: #F4F5F9;
+}
+.search-box{
+    margin-bottom: .24rem;
+}
+.hot-search{
+    display: flex;
+    align-items: center;
+}
+.hot-search label{
+    font-size: 0.24rem;
+    font-weight: 500;
+    color: #31384A;
+    white-space: nowrap;
+    margin-right: .14rem;
+}
+.hot-search span{
+    font-size: 0.24rem;
+    color: #828898;
+    margin-left: 0.4rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+.hot-search span.first-hot{
+    margin-left: 0;
+}
+.hot-search span img{
+    width: 0.17rem;
+    margin-right: 0.05rem;
+}
+.search-total{
+    padding: 0.42rem 0 .2rem 0;  
+    font-size: 0.32rem;
+    font-weight: 500;
+    color: #333333;
+}

@@ -10,18 +10,127 @@
     <meta content="email=no" name="format-detection">
     <meta name="description" content="这是网站的描述，填写有助于SEO" />
     <meta name="keywords" content="这是网站关键词" />
-    <title>忘记密码</title>
-    <link rel="stylesheet" href="./css/reset.css">
+    <title>登录</title>
+
     <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/commom.css">
 </head>
 
 <body>
-    <div class="home-wrap">
-        忘记密码
+    <div class="login-wrap">
+        <div class="login-inputs">
+            <div class="input__wrap">
+                <span class="tips">手机号</span>
+                <input class="phone" type="tel" placeholder="请输入手机号码" maxlength="11" />
+            </div>
+            <div class="input__wrap">
+                <span class="tips">验证码</span>
+                <input class="vrCode" placeholder="请输入验证码" maxlength="6" />
+                <span class="get-code">获取验证码</span>
+            </div>
+            <div class="input__wrap">
+                <span class="tips">新密码</span>
+                <input class="new-password" placeholder="请输入新密码" type="password" maxlength="8" />
+                <span class="input__wrap-eye">
+                    <img data-img="close" src="./images/eye-close.png" />
+                    <img class="is-none" data-img="open" src="./images/eye-open.png" />
+                </span>
+            </div>
+            <div class="input__wrap">
+                <span class="tips">密&nbsp;&nbsp;&nbsp;码</span>
+                <input class="password" placeholder="二次确认密码" type="password" maxlength="8" />
+                <span class="input__wrap-eye">
+                    <img data-img="close" src="./images/eye-close.png" />
+                    <img class="is-none" data-img="open" src="./images/eye-open.png" />
+                </span>
+            </div>
+            <button class="btn-other btn un-input btn-login">重置密码</button>
+        </div>
+
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
     <script>
         $(function () {
+            let showPassword = false;
+            let hasInputPhone = false;
+            let hasInputPassword = false;
+            let hasInputvrCode = false;
+            let hasInputAgainPassword = false;
+            let phone = '';
+            let password = '';
+            let againPassword = '';
+            let vrCode = '';
+            let time = 60;
+            let timer = null;
+
+            $('.phone', '.login-inputs').off('input').on('input', function () {
+                phone = $(this).val();
+                hasInputPhone = phone ? true : false
+                canLogin()
+            })
+
+            $('.password', '.login-inputs').off('input').on('input', function () {
+                password = $(this).val();
+                hasInputPassword = password ? true : false;
+                canLogin()
+            })
+
+            $('.new-password', '.login-inputs').off('input').on('input', function () {
+                againPassword = $(this).val();
+                hasInputAgainPassword = againPassword ? true : false;
+                canLogin()
+            })
+
+            $('.vrCode', '.login-inputs').off('input').on('input', function () {
+                vrCode = $(this).val();
+                hasInputvrCode = vrCode ? true : false;
+                canLogin()
+            })
+            //微信号登录
+            $('.wechat', '.login-wrap').off('click').on('click', function () {
+                //dosome
+            })
+
+            //登录按钮点击事件
+            $('.btn-login', '.login-inputs').off('click').on('click', function () {
+                if (hasInputPhone && hasInputPassword && hasInputvrCode && hasInputAgainPassword) {
+                    console.log(phone, password, againPassword, vrCode)
+                }
+            })
+
+            //短信倒计时
+            $('.get-code').off('click').on('click', function () {
+                if (time !== 60) return;
+                timer = window.setInterval(() => {
+                    if (time === 0) {
+                        time = 60;
+                        $(this).text('获取验证码')
+                        clearInterval(timer)
+                    } else {
+                        $(this).text(time + 's')
+                        time--;
+                    }
+                }, 1000);
+            })
+
+            function canLogin() {
+                if (hasInputPhone && hasInputPassword && hasInputvrCode && hasInputAgainPassword) {
+                    $('.btn-other').removeClass('un-input')
+                } else {
+                    $('.btn-other').addClass('un-input')
+                }
+            }
+
+            //显示密码
+            $('.input__wrap-eye', '.login-inputs').off('click').on('click', function () {
+                showPassword = !showPassword;
+                let target = showPassword ? 'open' : 'close';
+                let type = showPassword ? 'text' : 'password'
+                $(`[data-img="${target}"]`, $(this)).removeClass('is-none').siblings().addClass('is-none');
+                $(this).prev().attr('type', type)
+            })
         })
     </script>
 </body>

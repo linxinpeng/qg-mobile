@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="这是网站的描述，填写有助于SEO" />
+    <meta name="keywords" content="这是网站关键词" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/commom.css">
+</head>
+
+<body>
+    <div class="home">
+        <div id="tab-content"></div>
+        <div class="tabs">
+            <ul>
+                <li class="is-active tab-item" data-url="index">
+                    <span class="thz">
+                        <img src="./images/thz0.png" />
+                        <img class="active" src="./images/thz1.png" />
+                    </span>
+                    <p>谈合作</p>
+                </li>
+                <li class="tab-item" data-url="contacts">
+                    <span class="rm">
+                        <img src="./images/rm0.png" />
+                        <img class="active" src="./images/rm1.png" />
+                    </span>
+                    <p>人脉</p>
+                </li>
+                <li></li>
+                <li class="tab-fb-out tab-item" data-url="release">
+                    <div class="tab-fb">
+                        <span class="fb">
+                            <img src="./images/fb.png" />
+                        </span>
+                        <p>发布</p>
+                    </div>
+                </li>
+                <li class="tab-item" data-url="message">
+                    <span class="xx">
+                        <img src="./images/xx0.png" />
+                        <img class="active" src="./images/xx1.png" />
+                    </span>
+                    <p>消息</p>
+                </li>
+                <li class="tab-item" data-url="me">
+                    <span class="wd">
+                        <img src="./images/wd0.png" />
+                        <img class="active" src="./images/wd1.png" />
+                    </span>
+                    <p>我的</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+<script>
+    $(function () {
+        $('#tab-content').load('./index.html')
+        $('.tab-item', '.tabs').off('click').on('click', function () {
+            $(this).addClass('is-active').siblings().removeClass('is-active');
+            let url = $(this).data('url');
+            toPage(url)
+        })
+
+        function toPage(url) {
+            switch (url) {
+                case 'index':
+                    $('#tab-content').load('./index.html');
+                    break;
+                case 'contacts':
+                    $('#tab-content').load('./contacts.html');
+                    break;
+                case 'release':
+                    $('#tab-content').load('./release.html');
+                    break;
+                case 'message':
+                    $('#tab-content').load('./message.html');
+                    break;
+                case 'me':
+                    $('#tab-content').load('./me.html');
+                    break;
+            }
+        }
+    })
+</script>
