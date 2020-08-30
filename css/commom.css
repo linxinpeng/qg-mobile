@@ -83,6 +83,9 @@
     top: 0;
     right: 0;
 }
+.list-record img{
+    width: 0.78rem;
+}
 .home-list__item .list-header{
     display: flex;
     align-items: center;

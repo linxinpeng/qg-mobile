@@ -60,3 +60,6 @@ button{
     border: none;
     outline: none;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom: 0;
+}
