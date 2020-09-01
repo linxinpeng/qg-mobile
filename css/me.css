@@ -1,0 +1,22 @@
+.me-wrap{
+    padding: 0.3rem 0;
+}
+.me-header{
+    display: flex;
+    align-items: center;
+    padding: 0 0.4rem;
+}
+.me-header .me-header__img{
+    width: 1.12rem;
+    margin-right: 0.24rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.me-header .me-header__img img{
+    width: 100%;
+}
+.me-header__unlogin{
+    font-size: 0.36rem;
+    font-weight: 500;
+    color: #333333;
+}

@@ -1,0 +1,68 @@
+.contacts-detail{
+    padding: 0.3rem 0.4rem;
+}
+.contacts-detail .contacts-detail__header{
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.32rem;
+    margin-bottom: 0.24rem;
+    border-bottom: 0.02rem solid rgba(238, 238, 238, 1);
+}
+.contacts-detail .contacts-detail__header-user{
+    width: 0.88rem;
+    height: 0.88rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.2rem;
+}
+.contacts-detail .contacts-detail__header-user img{
+    width: 100%;
+}
+.contacts-detail .contacts-detail__header-info{
+    flex: 1;
+}
+.contacts-detail .contacts-detail__header-info-name{
+    display: flex;
+    align-items: center;
+}
+.contacts-detail .contacts-detail__header-info-name .name{
+    font-size: 0.36rem;
+    font-weight: 500;
+    color: #333333;
+}
+.contacts-detail .contacts-detail__header-info-name .tags{
+    display: flex;
+    align-items: center;
+}
+.contacts-detail .contacts-detail__header-info-name .tags img{
+    
+height: 0.24rem;
+    margin-left: 0.1rem;
+}
+.contacts-detail .contacts-detail__header-info-company{
+    font-size: 0.28rem;
+    color: #666666;
+}
+.contacts-detail .contacts-detail__header-share button{
+    width: 1.68rem;
+    height: 0.68rem;
+    background: #2EB79E;
+    border-radius: 0.34rem;
+    font-size: 0.28rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.contacts-detail .contacts-detail__info{
+
+}
+.contacts-detail .contacts-detail__info-row{
+    display: flex;
+    align-items: center;
+    font-size: 0.28rem;
+    color: #999999;
+    line-height: 0.56rem;
+    letter-spacing: 1px;
+}
+.contacts-detail .contacts-detail__info-row span{
+    color: rgba(51, 51, 51, 1);
+}

@@ -1,6 +1,99 @@
-<div class="">人脉</div>
+<div class="contacts">
+    <div class="contacts-search__box">
+        <span class="contacts-search__box-icon">
+            <img src="./images/search.png" />
+        </span>
+        <input placeholder="找人输入用户名、品牌、职位、地区" />
+        <button>搜索</button>
+    </div>
+    <div class="contacts-tips">
+        你可能感兴趣的人
+    </div>
+    <div class="contacts-cards">
+        <div class="contacts-cards__item">
+            <div class="list-header">
+                <span class="list-header__user"><img src="./images/tgdyy.png"></span>
+                <span class="list-header__name">王德法</span>
+                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
+                <span class="list-header__tag">
+                    <img src="./images/qy.png">
+                </span>
+            </div>
+            <div class="cards-info">
+                <div class="cards-info__item">
+                    <img src="./images/zy.png" />
+                    <span>灵点跳动 运营总监</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/wz.png" />
+                    <span>广东省 深圳市</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/lb.png" />
+                    <span>四大搜 头条 抖音核代资源</span>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-cards__item">
+            <div class="list-header">
+                <span class="list-header__user"><img src="./images/tgdyy.png"></span>
+                <span class="list-header__name">刘德华</span>
+                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
+                <span class="list-header__tag">
+                    <img src="./images/qy.png">
+                </span>
+                <span class="list-header__tag">
+                    <img src="./images/zy.png">
+                </span>
+            </div>
+            <div class="cards-info">
+                <div class="cards-info__item">
+                    <img src="./images/zy.png" />
+                    <span>灵点跳动 运营总监</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/wz.png" />
+                    <span>广东省 深圳市</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/lb.png" />
+                    <span>四大搜 头条 抖音核代资源</span>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-cards__item">
+            <div class="list-header">
+                <span class="list-header__user"><img src="./images/tgdyy.png"></span>
+                <span class="list-header__name">周即可</span>
+                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
+                <span class="list-header__tag">
+                    <img src="./images/qy.png">
+                </span>
+                <span class="list-header__tag">
+                    <img src="./images/vip10.png">
+                </span>
+            </div>
+            <div class="cards-info">
+                <div class="cards-info__item">
+                    <img src="./images/zy.png" />
+                    <span>灵点跳动 运营总监</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/wz.png" />
+                    <span>广东省 深圳市</span>
+                </div>
+                <div class="cards-info__item">
+                    <img src="./images/lb.png" />
+                    <span>四大搜 头条 抖音核代资源</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     $(function(){
-
+        $('.contacts-cards__item','.contacts').off('click').on('click',function(){
+            window.location.href = './contacts-detail.html?id=' + new Date().valueOf()
+        })
     })
 </script>

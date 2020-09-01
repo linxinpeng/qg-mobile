@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/me.css">
+    <link rel="stylesheet" href="./css/contacts.css">
     <link rel="stylesheet" href="./css/commom.css">
 </head>
 
@@ -68,10 +70,18 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
 <script>
     $(function () {
-        $('#tab-content').load('./index.html')
+        let url = sessionStorage.getItem('url') || 'index';
+        toPage(url)
+        $('.tab-item').each(function(){
+            if(url === $(this).data('url')){
+                $(this).addClass('is-active').siblings().removeClass('is-active')
+            }        
+        })
+        // $('#tab-content').load('./contacts.html')
         $('.tab-item', '.tabs').off('click').on('click', function () {
             $(this).addClass('is-active').siblings().removeClass('is-active');
             let url = $(this).data('url');
+            sessionStorage.setItem('url',url)
             toPage(url)
         })
 
