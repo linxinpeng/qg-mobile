@@ -1,325 +1,108 @@
+<!DOCTYPE html>
+<html>
 
-    <div class="home-wrap">
-        <!-- <div class="home-wrap__header-logo">
-            <img src="./images/header-logo.png" />
-        </div> -->
-        <div class="search-box">
-            <span>
-                <img src="./images/search.png" />
-            </span>
-            <input type="text" placeholder="搜索合作信息" />
-        </div>
-        <div class="home-banner">
-            <img src="./images/banner.png" />
-        </div>
-        <div class="home-swiper">
-            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper-item">
-                        <ul>
-                            <li>
-                                <span>
-                                    <img src="./images/xstg.png" />
-                                </span>
-                                <p>线上推广</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/tgdyy.png" />
-                                </span>
-                                <p>托管代运营</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/whzmt.png" />
-                                </span>
-                                <p>网红自媒体</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/spdmt.png" />
-                                </span>
-                                <p>视频多媒体</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/seoyh.png" />
-                                </span>
-                                <p>SEO优化</p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <span>
-                                    <img src="./images/ggzy.png" />
-                                </span>
-                                <p>广告资源</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/ldycx.png" />
-                                </span>
-                                <p>落地页程序</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/ggcl.png" />
-                                </span>
-                                <p>公关处理</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/xwrw.png" />
-                                </span>
-                                <p>新闻软文</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/zhzd.png" />
-                                </span>
-                                <p>账户诊断</p>
-                            </li>
-                        </ul>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="这是网站的描述，填写有助于SEO" />
+    <meta name="keywords" content="这是网站关键词" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/me.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/commom.css">
+</head>
+
+<body>
+    <div class="home">
+        <div id="tab-content"></div>
+        <div class="tabs">
+            <ul>
+                <li class="is-active tab-item" data-url="home">
+                    <span class="thz">
+                        <img src="./images/thz0.png" />
+                        <img class="active" src="./images/thz1.png" />
+                    </span>
+                    <p>谈合作</p>
+                </li>
+                <li class="tab-item" data-url="contacts">
+                    <span class="rm">
+                        <img src="./images/rm0.png" />
+                        <img class="active" src="./images/rm1.png" />
+                    </span>
+                    <p>人脉</p>
+                </li>
+                <li></li>
+                <li class="tab-fb-out tab-item" data-url="release">
+                    <div class="tab-fb">
+                        <span class="fb">
+                            <img src="./images/fb.png" />
+                        </span>
+                        <p>发布</p>
                     </div>
-                    <div class="swiper-slide swiper-item">
-                        <ul>
-                            <li>
-                                <span>
-                                    <img src="./images/xstg.png" />
-                                </span>
-                                <p>线上推广</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/tgdyy.png" />
-                                </span>
-                                <p>托管代运营</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/whzmt.png" />
-                                </span>
-                                <p>网红自媒体</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/spdmt.png" />
-                                </span>
-                                <p>视频多媒体</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="./images/seoyh.png" />
-                                </span>
-                                <p>SEO优化</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-            </div>
-        </div>
-        <div class="home-list">
-            <div class="home-list__tabs">
-                <span class="is-active">推荐</span>
-                <span>最近活跃</span>
-                <span>最近发布</span>
-            </div>
-            <div class="home-list__box">
-                <div class="home-list__item home-list__record is-block">
-                    <ul>
-                        <li>
-                            <div class="list-record">
-                                <img src="./images/record.png" />
-                            </div>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">王德法</span>
-                                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">张学友</span>
-                                <span class="list-header__company">｜ 北京绿巨人公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                                <span class="list-header__tag">
-                                    <img src="./images/vip1.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">刘德华</span>
-                                <span class="list-header__company">｜ 北京滴滴有限公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                                <span class="list-header__tag">
-                                    <img src="./images/zy.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="home-list__item home-list__huoyue">
-                    <ul>
-                        <li>
-                            <div class="list-record">
-                                <img src="./images/record.png" />
-                            </div>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">王德法</span>
-                                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">张学友</span>
-                                <span class="list-header__company">｜ 北京绿巨人公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                                <span class="list-header__tag">
-                                    <img src="./images/vip1.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="home-list__item home-list__fabu">
-                    <ul>
-                        <li>
-                            <div class="list-record">
-                                <img src="./images/record.png" />
-                            </div>
-                            <div class="list-header">
-                                <span class="list-header__user"><img src="./images/tgdyy.png" /></span>
-                                <span class="list-header__name">王德法</span>
-                                <span class="list-header__company">｜ 北京蜜蜂传媒有限公司</span>
-                                <span class="list-header__tag">
-                                    <img src="./images/qy.png" />
-                                </span>
-                            </div>
-                            <div class="list-desc">
-                                能提供服饰，化妆品的供应链渠道，以及直播数据的交流，等等各种渠道。
-                            </div>
-                            <div class="list-footer">
-                                <span class="list-footer__btn">线下推广</span>
-                                <div>
-                                    <span class="list-footer__time">1小时前</span>
-                                    <span class="list-footer__show">
-                                        <img src="./images/show-eye.png" />
-                                        1688
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="no-more">
-                我是有底线的～
-            </div>
+                </li>
+                <li class="tab-item" data-url="message">
+                    <span class="xx">
+                        <img src="./images/xx0.png" />
+                        <img class="active" src="./images/xx1.png" />
+                    </span>
+                    <p>消息</p>
+                </li>
+                <li class="tab-item" data-url="me">
+                    <span class="wd">
+                        <img src="./images/wd0.png" />
+                        <img class="active" src="./images/wd1.png" />
+                    </span>
+                    <p>我的</p>
+                </li>
+            </ul>
         </div>
     </div>
-    <script>
-        $(function () {
-
-            $('span','.home-list__tabs').off('click').on('click',function(){
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+<script>
+    $(function () {
+        let url = sessionStorage.getItem('url') || 'home';
+        toPage(url)
+        $('.tab-item').each(function(){
+            if(url === $(this).data('url')){
                 $(this).addClass('is-active').siblings().removeClass('is-active')
-                let index = $(this).index();
-                let dom = $('.home-list__item','.home-list')[index]
-                $(dom).addClass('is-block').siblings().removeClass('is-block')
-            })
-
-            $('.search-box','.home-wrap').off('click').on('click',function(){
-                location.href = "./search-list.html"
-            })
-            //轮播
-            var swiper = new Swiper('.swiper-container', {
-                // 如果需要分页器
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
+            }        
         })
-    </script>
+        // $('#tab-content').load('./contacts.html')
+        $('.tab-item', '.tabs').off('click').on('click', function () {
+            $(this).addClass('is-active').siblings().removeClass('is-active');
+            let url = $(this).data('url');
+            sessionStorage.setItem('url',url)
+            toPage(url)
+        })
+
+        function toPage(url) {
+            switch (url) {
+                case 'home':
+                    $('#tab-content').load('./home.html');
+                    break;
+                case 'contacts':
+                    $('#tab-content').load('./contacts.html');
+                    break;
+                case 'release':
+                    $('#tab-content').load('./release.html');
+                    break;
+                case 'message':
+                    $('#tab-content').load('./message.html');
+                    break;
+                case 'me':
+                    $('#tab-content').load('./me.html');
+                    break;
+            }
+        }
+    })
+</script>

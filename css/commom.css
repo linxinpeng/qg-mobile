@@ -158,3 +158,57 @@
 .is-block{
     display: block;
 }
+.main-title{
+    font-size: 0.32rem;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.main-title::before{
+    content: "";
+    display: inline-block;
+    width: 0.08rem;
+    height: 0.3rem;
+    background: #2EB79E;
+    border-radius: 0.04rem;
+    margin-right: 0.2rem;
+}
+.space{
+    background-color: rgb(244, 245, 249);
+    height: 0.2rem;
+    width: calc(100% + 0.8rem);
+    transform: translateX(-0.4rem);
+}
+.dialog{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 0.28rem 0.3rem;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    width: 2.6rem;
+    height: 2rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0.2rem;
+    z-index: 1001;
+}
+.dialog-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dialog-icon img{
+    width: 0.64rem;
+}
+.dialog-content{
+    font-size: 0.26rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 0.36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.14rem;
+}
