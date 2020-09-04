@@ -1,7 +1,7 @@
 .contacts{
     padding: 30px;
     background-color: rgba(244, 245, 249, 1);
-    min-height: 100vh;
+    min-height: calc(100vh - 1rem);
 }
 .contacts .contacts-search__box{
     height: 0.72rem;

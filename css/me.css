@@ -15,8 +15,173 @@
 .me-header .me-header__img img{
     width: 100%;
 }
+.me-header__cont{
+    flex: 1;
+}
 .me-header__unlogin{
     font-size: 0.36rem;
     font-weight: 500;
     color: #333333;
+}
+.me-header__login,.me-header__certified{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.me-header__login .me-header__login-left h3 , .me-header__certified .me-header__login-left h3 {
+    font-size: 0.36rem;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.me-header__certified .me-header__login-left h3 img{
+    width: 0.26rem;
+    margin-left: 0.2rem;
+}
+.me-header__login .me-header__login-left p , .me-header__certified .me-header__login-left p{
+    font-size: 0.28rem;
+    color: #999999;
+}
+.me-header__login .me-header__login-right button{
+    width: 1.28rem;
+    height: 0.52rem;
+    background: #EBECED;
+    border-radius: 0.28rem;
+    font-size: 0.24rem;
+    color: #999999;
+}
+.me-header__certified .me-header__login-right button{
+    width: 1.28rem;
+    height: 0.52rem;
+    background: #2EB79E;
+    border-radius: 0.28rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.me-actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.68rem;
+}
+.me-actions .me-actions__item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.me-actions .me-actions__item:last-child::after{
+    display: none;
+}
+.me-actions .me-actions__item::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 0.02rem;
+    height: 0.78rem;
+    background-color: rgba(237, 237, 237, 1);
+}
+.me-actions .me-actions__item p{
+    font-size: 0.26rem;
+    color: #666666;
+    line-height: 0.36rem;
+}
+.me-actions__item span{
+    font-size: 0.36rem;
+    font-weight: 600;
+    color: #22AE94;
+    display: flex;
+    align-items: center;
+    height: 0.5rem;
+}
+.me-card{
+    height: 1rem;
+}
+.me-card__unvip{
+    padding: 0 0.3rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DFE3E7 100%);
+    filter: blur(0px);
+}
+.me-card__unvip .me-card__unvip-inner{
+    height: 1rem;
+    background: linear-gradient(90deg, #312622 0%, #2B2626 100%);
+    border-radius: 0.24rem 0.24rem 0rem 0rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.34rem;
+}
+.me-card__unvip .me-card__unvip-inner img,.me-card__vip .me-card__vip-inner img{
+    width: 0.32rem;
+    margin-right: 0.16rem;
+}
+.me-card__unvip .me-card__unvip-inner p{
+    font-size: 0.28rem;
+    color: #F9D5A4;
+}
+.me-card__unvip .me-card__unvip-inner button{
+    margin-left: auto;
+    width: 1.6rem;
+    height: 0.48rem;
+    background: linear-gradient(90deg, #FFEBD1 0%, #EFCDA3 100%);
+    border-radius: 0.24rem;
+    
+    font-size: 0.24rem;
+    font-weight: 400;
+    color: #492720;
+}
+.me-card .me-card__vip{
+    padding: 0 0.3rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EEE8E0 100%);
+    filter: blur(0px);
+}
+.me-card .me-card__vip-inner{
+    height: 1rem;
+    background: linear-gradient(90deg, #FFEBD1 0%, #F3CFA3 100%);
+    border-radius: 0.24rem 0.24rem 0rem 0rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.34rem;
+}
+.me-card__vip .me-card__vip-inner p{
+    font-size: 0.28rem;
+    color: #68502F;
+}
+.me-card__vip .me-card__vip-inner button{
+    margin-left: auto;
+    width: 1.6rem;
+    height: 0.48rem;
+    background: rgba(254, 233, 207, 1);
+    border-radius: 0.24rem;
+    font-size: 0.24rem;
+    color: #68502F;
+}   
+
+.me-list{
+    padding-top: 0.2rem;
+}
+.me-list .me-list__item{
+    display: flex;
+    align-items: center;
+    height: 1.12rem;
+    margin: 0 0.4rem;
+    border-bottom: 0.02rem solid rgba(237, 237, 237, 1);
+}
+.me-list .me-list__item .me-list__item-icon{
+    width: 0.32rem;
+    margin-right: 0.28rem;
+}
+.me-list .me-list__item .me-list__item-icon img{
+    width: 100%;
+}
+.me-list .me-list__item p{
+    flex: 1;
+    font-size: 0.3rem;
+    color: #343434;
+}
+.me-list .me-list__item .me-list__item-arrow img{
+    height: 0.18rem;
 }

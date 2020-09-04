@@ -1,22 +1,117 @@
 <div class="me-wrap">
     <div class="me-header">
         <div class="me-header__img">
-            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598979426952&di=c41699561885620e3954d04c029b1e94&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201410%2F09%2F20141009224754_AswrQ.jpeg" />
+            <img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598979426952&di=c41699561885620e3954d04c029b1e94&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201410%2F09%2F20141009224754_AswrQ.jpeg" />
         </div>
         <div class="me-header__cont">
             <!-- 未登录状态 -->
-            <div class="me-header__unlogin">
+            <div class="me-header__unlogin is-none">
                 <span>登录</span>/<span>注册</span>
             </div>
             <!-- 已登录状态 -->
-            <div class="me-header__login"></div>
+            <div class="me-header__login is-none">
+                <div class="me-header__login-left">
+                    <h3>海边的卡卡</h3>
+                    <p>手机号15838267261</p>
+                </div>
+                <div class="me-header__login-right">
+                    <button>未认证</button>
+                </div>
+            </div>
             <!-- 已认证状态 -->
-            <div class="me-header__certified"></div>
+            <div class="me-header__certified">
+                <div class="me-header__login-left">
+                    <h3>海边的卡卡<img src="./images/vip1.png" /></h3>
+                    <p>手机号15838267261</p>
+                </div>
+                <div class="me-header__login-right">
+                    <button>已认证</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="me-actions">
+        <div class="me-actions__item">
+            <span>0</span>
+            <p>我的发布</p>
+        </div>
+        <div class="me-actions__item">
+            <span>0</span>
+            <p>合作历史</p>
+        </div>
+        <div class="me-actions__item">
+            <span>
+                <img style="width: 0.41rem;" src="./images/mp.png" />
+            </span>
+            <p>我的名片</p>
+        </div>
+        <div class="me-actions__item">
+            <span>
+                <img style="width: 0.29rem;" src="./images/bjzl.png" />
+            </span>
+            <p>编辑资料</p>
+        </div>
+    </div>
+    <div class="me-card">
+        <!-- 非会员 -->
+        <div class="me-card__unvip is-none">
+            <div class="me-card__unvip-inner">
+                <img src="./images/vip-liang.png" />
+                <p>您还不是通青瓜会员</p>
+                <button>开通会员 ></button>
+            </div>
+        </div>
+        <!-- 会员 -->
+        <div class="me-card__vip">
+            <div class="me-card__vip-inner">
+                <img src="./images/vip-liang.png" />
+                <p>2021.06.25会员到期</p>
+                <button>查看权益 ></button>
+            </div>
+        </div>
+    </div>
+    <div class="me-list">
+        <div class="me-list__item">
+            <span class="me-list__item-icon">
+                <img src="./images/gsrz.png" />
+            </span>
+            <p>公司认证</p>
+            <span class="me-list__item-arrow">
+                <img src="./images/jt333.png" />
+            </span>
+        </div>
+        <div class="me-list__item">
+            <span class="me-list__item-icon">
+                <img src="./images/hyzx.png" />
+            </span>
+            <p>会员中心</p>
+            <span class="me-list__item-arrow">
+                <img src="./images/jt333.png" />
+            </span>
+        </div>
+        <div class="me-list__item">
+            <span class="me-list__item-icon">
+                <img src="./images/bzzx.png" />
+            </span>
+            <p>帮助中心</p>
+            <span class="me-list__item-arrow">
+                <img src="./images/jt333.png" />
+            </span>
+        </div>
+        <div class="me-list__item">
+            <span class="me-list__item-icon">
+                <img src="./images/sz.png" />
+            </span>
+            <p>设置</p>
+            <span class="me-list__item-arrow">
+                <img src="./images/jt333.png" />
+            </span>
         </div>
     </div>
 </div>
 <script>
-    $(function(){
+    $(function () {
 
     })
 </script>
