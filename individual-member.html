@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/commom.css">
     <link rel="stylesheet" href="./css/individual-member.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -47,10 +48,94 @@
         </div>
         <div class="ind-mem__comm ind-mem__setmeal">
             <h3>会员套餐</h3>
+            <div class="ind-mem__setmeal-cont">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <p class="ind-mem__setmeal-vip">个人VIP版</p>
+                                <div class="ind-mem__setmeal-money">
+                                    <span>499</span>元/月
+                                </div>
+                                <p class="ind-mem__setmeal-desc">100次沟通次数</p>
+                                <div class="ind-mem__setmeal-bottom">
+                                    <img src="./images/vip-hy.png" />
+                                    初体验首选
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="ind-mem__comm ind-mem__buyaccount">
             <h3>购买账号</h3>
-            <input type="tel" placeholder="请输入手机号码" maxlength="11"/>
+            <input type="tel" placeholder="请输入手机号码" maxlength="11" />
         </div>
         <div class="ind-mem__comm ind-mem__privilege">
             <h3>会员优享权益</h3>
@@ -60,9 +145,13 @@
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
 <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 <script>
     $(function () {
-
+        var mySwiper = new Swiper('.swiper-container',{
+            slidesPerView: 'auto',
+            spaceBetween: 16
+        })
     })
 </script>

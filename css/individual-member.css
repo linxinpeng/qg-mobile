@@ -69,3 +69,48 @@
     padding-left: .24rem;
     box-sizing: border-box;
 }
+.ind-mem__setmeal-cont .swiper-slide{
+    width: 2.4rem;
+}
+.ind-mem__setmeal-cont .swiper-item{
+    width: 2.4rem;
+    height: 2.8rem;
+    border-radius: 0.12rem;
+    border: 0.02rem solid #E9EAEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ind-mem__setmeal-cont .swiper-item p.ind-mem__setmeal-vip{
+    font-size: 0.24rem;
+    color: #333333;
+    padding: 0.44rem 0 0.1rem 0;
+}
+.ind-mem__setmeal-cont .swiper-item .ind-mem__setmeal-money{
+    font-size: 0.22rem;
+    color: #333333;
+}
+.ind-mem__setmeal-cont .swiper-item .ind-mem__setmeal-money span{
+    font-size: 0.56rem;
+}
+.ind-mem__setmeal-cont .swiper-item p.ind-mem__setmeal-desc{
+    font-size: 0.22rem;
+    color: #999999;
+}
+.ind-mem__setmeal-cont .swiper-item .ind-mem__setmeal-bottom{
+    margin-top: auto;
+    height: 0.6rem;
+    background: #FEF5E8;
+    border-radius: 0rem 0rem 0.12rem 0.12rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 0.22rem;
+    color: #946740;
+}
+.ind-mem__setmeal-cont .swiper-item .ind-mem__setmeal-bottom img{
+    height: 0.18rem;
+    margin-right: 0.1rem;
+}

@@ -1,5 +1,5 @@
 .is-none{
-    display: none;
+    display: none !important;
 }
 .btn{
     display: flex;
