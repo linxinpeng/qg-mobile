@@ -1,6 +1,126 @@
-<div class="">发布</div>
+<div class="release">
+    <div class="release-tip">
+        <img src="./images/warn.png" />
+        违规删除，违法封号！请严格按规则发布，勿投机取巧!
+    </div>
+    <form class="release-form">
+        <div class="form-item">
+            <label class="required">需求类型</label>
+            <div class="form-item__cont">
+                <div class="select xqlx">
+                    <input placeholder="请选择" readonly />
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="required">标题</label>
+            <div class="form-item__cont">
+                <div class="select bt">
+                    <input placeholder="请选择" />
+                    <span>0/20</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="required">结算方式 </label>
+            <div class="form-item__cont">
+                <div class="select jsfs">
+                    <input placeholder="请选择" readonly />
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="required">付款方式</label>
+            <div class="form-item__cont">
+                <div class="select fkfs">
+                    <input placeholder="请选择" readonly />
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="required">所属行业 </label>
+            <div class="form-item__cont">
+                <div class="select sshy">
+                    <input placeholder="请选择" readonly />
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="required">需求描述 </label>
+            <div class="form-item__cont">
+                <div class="select xqms">
+                    <textarea placeholder="为了提高合作对接的效率，请尽可能详细描述您的需求，包括但不限于项目背景、当前问题、其他个性化需求等。500字以内"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label>有效时间<span>（开始时间）</span> </label>
+            <div class="form-item__cont">
+                <div class="select kssj">
+                    <input type="text" style="flex: 1;" placeholder="开始时间" id="begin-date">
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label>有效时间<span>（结束时间）</span> </label>
+            <div class="form-item__cont">
+                <div class="select jssj">
+                    <input type="text" style="flex: 1;" placeholder="结束时间" id="end-date">
+                    <img src="./images/jtxx.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label>相关照片<span>（最多3张，图片不能带联系方式，不超过200K）</span> </label>
+            <div class="form-item__cont">
+                <div class="form-item__upload">
+                    <img src="./images/sczp.png" />
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label>联系方式<span>（联系电话、微信号、QQ至少填一项）</span> </label>
+            <div class="form-item__cont">
+                <div class="form-contact">
+                    <div class="form-contact__item">
+                        <img src="./images/phone.png" />
+                        <input type="tel">
+                    </div>
+                    <div class="form-contact__item">
+                        <img src="./images/wx.png" />
+                        <input type="text">
+                    </div>
+                    <div class="form-contact__item">
+                        <img src="./images/qq.png" />
+                        <input type="tel">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="form-submit">确认发布</button>
+        </div>
+    </form>
+</div>
+<script src="./js/lib/jdate.min.js"></script>
 <script>
-    $(function(){
-
+    $(function () {
+        new Jdate({
+            el: '#begin-date',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100
+        })
+        new Jdate({
+            el: '#end-date',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100
+        })
     })
 </script>

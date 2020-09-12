@@ -36,7 +36,7 @@
             <span>0</span>
             <p>我的发布</p>
         </div>
-        <div class="me-actions__item">
+        <div class="me-actions__item" data-url="./cooperate-history.html">
             <span>0</span>
             <p>合作历史</p>
         </div>
@@ -67,12 +67,12 @@
             <div class="me-card__vip-inner">
                 <img src="./images/vip-liang.png" />
                 <p>2021.06.25会员到期</p>
-                <button>查看权益 ></button>
+                <a style="margin-left: auto;" href="./individual-member.html"><button>查看权益 ></button></a>
             </div>
         </div>
     </div>
     <div class="me-list">
-        <div class="me-list__item">
+        <!-- <div class="me-list__item">
             <span class="me-list__item-icon">
                 <img src="./images/gsrz.png" />
             </span>
@@ -80,25 +80,29 @@
             <span class="me-list__item-arrow">
                 <img src="./images/jt333.png" />
             </span>
-        </div>
-        <div class="me-list__item">
-            <span class="me-list__item-icon">
-                <img src="./images/hyzx.png" />
-            </span>
-            <p>会员中心</p>
-            <span class="me-list__item-arrow">
-                <img src="./images/jt333.png" />
-            </span>
-        </div>
-        <div class="me-list__item">
-            <span class="me-list__item-icon">
-                <img src="./images/bzzx.png" />
-            </span>
-            <p>帮助中心</p>
-            <span class="me-list__item-arrow">
-                <img src="./images/jt333.png" />
-            </span>
-        </div>
+        </div> -->
+        <a href="./individual-member.html">
+            <div class="me-list__item">
+                <span class="me-list__item-icon">
+                    <img src="./images/hyzx.png" />
+                </span>
+                <p>会员中心</p>
+                <span class="me-list__item-arrow">
+                    <img src="./images/jt333.png" />
+                </span>
+            </div>
+        </a>
+        <a href="./help.html">
+            <div class="me-list__item">
+                <span class="me-list__item-icon">
+                    <img src="./images/bzzx.png" />
+                </span>
+                <p>帮助中心</p>
+                <span class="me-list__item-arrow">
+                    <img src="./images/jt333.png" />
+                </span>
+            </div>
+        </a>
         <div class="me-list__item">
             <span class="me-list__item-icon">
                 <img src="./images/sz.png" />
@@ -112,6 +116,11 @@
 </div>
 <script>
     $(function () {
-
+        $('.me-actions__item','.me-actions').off('click').on('click',function(){
+            const url = $(this).data('url')
+            if(url){
+                location.href = url
+            }
+        })
     })
 </script>

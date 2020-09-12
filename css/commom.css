@@ -212,3 +212,118 @@
     align-items: center;
     margin-top: 0.14rem;
 }
+.is-show{
+    display: block !important;
+}
+.release {
+    padding: 0.3rem 0.4rem;
+}
+.release .release-tip{
+    height: 0.64rem;
+    background: #FFF0EF;
+    border-radius: 0.08rem;
+    border: 0.01rem solid #FFABA6;
+    font-size: 0.24rem;
+    color: #F01F14;
+    display: flex;
+    align-items: center;
+    padding-left: 0.24rem;
+    margin-bottom: 0.32rem;
+}
+.release .release-tip img{
+    width: 0.29rem;
+    margin-right: 0.16rem;
+}
+.release-form{
+    display: flex;
+    flex-direction: column;
+}
+.release-form .form-item{
+    margin-bottom: 0.2rem;
+}
+.release-form .form-item label{
+    display: inline-block;
+    height: 0.68rem;
+    font-size: 0.28rem;
+    font-weight: 500;
+    color: #333333;
+}
+.release-form .form-item label span{
+    font-size: 0.24rem;
+    color: #999999;
+}
+.release-form .form-item .select{
+    height: 0.8rem;
+    background: #F6F7F9;
+    border-radius: 0.08rem;
+    padding: 0 0.28rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.release-form .form-item .select img{
+    width: 0.16rem;
+}
+.required{
+    position: relative;
+}
+.required::before{
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: -0.2rem;
+    color: #FF3B30;
+    display: block;
+}
+.release-form .form-item .select span{
+    font-size: 0.24rem;
+    color: #AAAAAA;
+}
+.release-form .form-item .select textarea{
+    width: 100%;
+    height: 2.4rem;
+    border: none;
+    background-color: transparent;
+    font-size: 0.28rem;
+    color: #BBBBBB;
+    line-height: 0.4rem;
+    outline: none;
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+}
+.release-form .form-item .xqms{
+    height: 2.4rem;
+}
+.form-item__upload{
+    margin: 0.12rem 0;
+}
+.form-item__upload img{
+    width: 2.16rem;
+}
+.form-contact__item{
+    display: flex;
+    align-items: center;
+    height: 0.8rem;
+    background: #F6F7F9;
+    border-radius: 0.08rem;
+    padding-left: 0.28rem;
+    margin-bottom: 0.28rem;
+}
+.form-contact__item img{ 
+    height: 0.35rem;
+}
+.form-contact__item input{
+    padding-left: 0.28rem;
+}
+.form-submit{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 0.8rem;
+    background: #2EB79E;
+    border-radius: 0.46rem;
+    font-size: 0.32rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}

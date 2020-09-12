@@ -2,7 +2,7 @@
     background-color: #f2f2f2;
 }
 .ind-mem .ind-mem__header{
-    background-image: url(../images/hyzxbg.png);
+    background-image: url('../images/hyzxbg.png');
     padding: 0.48rem 0 0.4rem 0.4rem;
 }
 .ind-mem__header .header-content{
