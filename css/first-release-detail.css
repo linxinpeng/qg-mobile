@@ -1,0 +1,199 @@
+.xq-detail{
+    padding: 0.36rem 0.4rem;
+}
+.xq-detail .xq-detail__title{
+    font-size: 0.4rem;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 0.24rem;
+}
+.xq-detail .xq-detail__title span{
+    width: 0.8rem;
+    height: 0.42rem;
+    background: #3296FA;
+    border-radius: 0.21rem;
+    text-align: center;
+    font-size: 0.28rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 0.42rem;
+    display: inline-block;
+    margin-right: 0.1rem;
+    transform: translateY(-0.05rem);
+}
+.xq-detail__info{
+    display: flex;
+    align-items: center;
+    font-size: 0.24rem;
+    color: #999999;
+    padding-bottom: 0.36rem;
+    border-bottom: 0.02rem solid #EDEDED;
+    margin-bottom: 0.34rem;
+}
+.xq-detail__info span{
+    margin-right: 0.28rem;
+    display: flex;
+    align-items: center;
+}
+.xq-detail__info span img{
+    height: 0.15rem;
+    margin-right: 0.05rem;
+}
+.xq-detail__card{
+
+}
+.xq-detail__card .xq-detail__card-header{
+    display: flex;
+    align-items: center;
+}
+.xq-detail__card .xq-detail__card-header .user{
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.xq-detail__card .xq-detail__card-header .user img{
+    width: 100%;
+}
+.xq-detail__card .xq-detail__card-header .name{
+    margin-left: 0.12rem;
+    font-size: 0.28rem;
+    font-weight: 500;
+    color: #333333;  
+}
+.xq-detail__card .xq-detail__card-header .company{
+    font-size: 0.24rem;
+    color: #999999;
+}
+.xq-detail__card .xq-detail__card-header .status{
+    margin-left: 0.12rem;
+    height: 0.24rem;
+}
+.xq-detail__card-desc{
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 0.48rem;
+    text-align: justify;
+    margin: 0.2rem 0;
+}
+.xq-detail__card-other-row {  
+    font-size: 0.28rem;
+}
+.xq-detail__card-other-row label{
+    color: #666666;
+}
+.special-title{
+    font-size: 0.32rem;
+    font-weight: 500;
+    color: #333333;
+}
+.special-title::before{
+    content: "";
+    display: inline-block;
+    width: 0.08rem;
+    height: 0.3rem;
+    background: #2EB79E;
+    border-radius: 0.04rem;
+    margin-right: 0.2rem;
+}
+.xq-detail__contact{
+    margin-top: 0.7rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.02rem solid #EDEDED;
+}
+.xq-detail__contact-cont{
+    margin-top: 0.32rem;
+    
+}
+.xq-detail__contact-cont-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    font-size: 0.28rem;
+}
+.xq-detail__contact-cont-row img{
+    height: 0.27rem;
+    margin-right: 0.12rem;
+}
+.xq-detail__fun{
+    margin-top: 0.36rem;
+}
+.xq-detail__fun ul li{
+    height: 1rem;
+    font-size: 0.28rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.02rem solid #eee;
+}
+.xq-detail__fun ul li a{
+    color: #666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.xq-detail__fun ul li a:hover{
+    color: #1BBC9C;
+}
+.xq-detail__btn{
+    padding: 0.6rem 0;
+    text-align: center;
+}
+.xq-detail__btn button{
+    width: 2.2rem;
+    height: 0.76rem;
+    background: #1BBC9C;
+    border-radius: 0.38rem;
+    font-size: 0.28rem;
+    color: #FFFFFF;
+}
+.xq-detail__btn button img{
+    height: 0.34rem;
+    margin-right: 0.1rem;
+}
+.xq-detail__contact-unvip{
+    width: 6.7rem;
+    height: 1.4rem;
+    background: #1E100D;
+    border-radius: 0.16rem;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.xq-detail__contact-unvip p{
+    font-size: 0.24rem;
+    color: #FFCAA5;
+    line-height: 0.34rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.18);
+}
+.xq-detail__contact-unvip button{
+    width: 2rem;
+    height: 0.64rem;
+    background: linear-gradient(90deg, #E8BB9D 0%, #F4DBC1 100%);
+    border-radius: 0.42rem;
+    margin-top: 0.1rem;
+    font-size: 0.29rem;
+    font-weight: 500;
+    color: #6A3313;
+}
+.xq-detail__company{
+    margin: 0.4rem 0;
+}
+.xq-detail__company p{
+    font-size: 0.29rem;
+    color: #333333;
+    line-height: 0.48rem;
+    margin-top: 0.34rem;
+    text-align: justify;
+}
+.xq-detail__company-photo{
+    margin: 0.12rem 0;
+}
+.xq-detail__company-photo img{
+    width: 2.08rem;
+    height: 2.08rem;
+    background: #D8D8D8;
+    border-radius: 0.16rem;
+    margin-right: 0.12rem;
+}

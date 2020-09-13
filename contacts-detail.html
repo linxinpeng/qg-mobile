@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/contacts-detail.css">
     <link rel="stylesheet" href="./css/commom.css">
+    <link rel="stylesheet" href="./css/share.css">
 </head>
 
 <body>
@@ -205,25 +206,100 @@
         </div>
     </div>
 
-    <!-- <div class="share-card">
+    <div class="share-card" style="display: none;">
         <div class="share-card__box">
-            <div class="share-card__inner">
+            <div class="share-card__inner" id="cardShare">
                 <div class="share-card__info">
+                    <div class="share-card__info-header">
+                        <div class="share-card__info-header-left">
+                            <img src="./images/user-art.jpg" />
+                        </div>
+                        <div class="share-card__info-header-right">
+                            <div>
+                                <h3>王发达</h3>
+                                <img src="./images/qy.png" />
+                                <img src="./images/vip1.png" />
+                            </div>
+                            <p>北京蜜蜂传媒有限公司</p>
+                        </div>
+                    </div>
+                    <div class="share-card__info-cont">
+                        <div class="share-card__info-cont-row">
+                            <label>行业：</label>广告媒体代理商
+                        </div>
+                        <div class="share-card__info-cont-row">
+                            <label>品牌：</label>黑白灰科技
+                        </div>
+                        <div class="share-card__info-cont-row">
+                            <label>公司：</label>厦门玉米有限公司
+                        </div>
+                        <div class="share-card__info-cont-row">
+                            <label>官服：</label>www.baidu.com
+                        </div>
+                    </div>
+
+                    <div class="share-card__sup">
+                        <h3>我提供</h3>
+                        <p>四大搜 头条 抖音核代资源</p>
+                    </div>
+
+                    <div class="share-card__need">
+                        <h3>我需要</h3>
+                        <p>四大搜 头条 抖音核代资源</p>
+                    </div>
 
                 </div>
-                <div class="share-card__"></div>
+                <div class="share-card__other">
+                    <div class="share-card__other-left">
+                        <img src="./images/header-logo.png" />
+                        <p>让商务对接更简单</p>
+                    </div>
+                    <div class="share-card__other-right">
+                        <div class="xcx">
+                            <img src="./images/xcx.jpg" />
+                        </div>
+                        长按识别码
+                    </div>
+                </div>
+            </div>
+            <div class="share-card__btn">
+                <button>保存名片</button>
             </div>
         </div>
-    </div> -->
+    </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="./js/html2canvas.min.js"></script>
+<script src="./js/canvas2Image.js"></script>
 <script>
     $(function () {
-        $('button','.contacts-detail__contact-row').off('click').on('click',function(){
+        $('button', '.contacts-detail__contact-row').off('click').on('click', function () {
             $('.dialog').stop().fadeIn(300)
-            setTimeout(()=>{
+            setTimeout(() => {
                 $('.dialog').stop().fadeOut(300)
-            },3000)
+            }, 3000)
         })
+
+        $('button', '.contacts-detail__header-share').off('click').on('click', function () {
+            $('.share-card').fadeIn()
+        })
+
+        $('button', '.share-card__btn').off('click').on('click', function () {
+            window.pageYoffset = 0;
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            html2canvas($("#cardShare")[0], { scale: 1 }).then(function (canvas) {
+                var imgUri = canvas.toDataURL('image/png');
+
+                $(".contacts-detail").append('<a class="load-img" href="' + imgUri + '" download="下载的图片">保存图片</a>');
+                $(".load-img")[0].click()
+            })
+            // $(".load-img")[0].click()
+
+            $('.share-card').fadeOut()
+
+        })
+
+
     })
 </script>

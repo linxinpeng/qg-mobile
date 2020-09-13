@@ -10,6 +10,7 @@
     <meta content="email=no" name="format-detection">
     <meta name="description" content="这是网站的描述，填写有助于SEO" />
     <meta name="keywords" content="这是网站关键词" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script type="text/javascript" src="./js/flexible.js"></script>
     <link rel="stylesheet" href="./css/index.css">
@@ -18,6 +19,9 @@
     <link rel="stylesheet" href="./css/me.css">
     <link rel="stylesheet" href="./css/contacts.css">
     <link rel="stylesheet" href="./css/commom.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
 </head>
 
 <body>
@@ -72,16 +76,16 @@
     $(function () {
         let url = sessionStorage.getItem('url') || 'home';
         toPage(url)
-        $('.tab-item').each(function(){
-            if(url === $(this).data('url')){
+        $('.tab-item').each(function () {
+            if (url === $(this).data('url')) {
                 $(this).addClass('is-active').siblings().removeClass('is-active')
-            }        
+            }
         })
         // $('#tab-content').load('./contacts.html')
         $('.tab-item', '.tabs').off('click').on('click', function () {
             $(this).addClass('is-active').siblings().removeClass('is-active');
             let url = $(this).data('url');
-            sessionStorage.setItem('url',url)
+            sessionStorage.setItem('url', url)
             toPage(url)
         })
 

@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="这是网站的描述，填写有助于SEO" />
+    <meta name="keywords" content="这是网站关键词" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/me.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/commom.css">
+    <title>服务发布</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
+</head>
+
+<body>
 <div class="release" id="app">
     <div class="release-tip">
         <img src="./images/warn.png" />
@@ -5,7 +32,7 @@
     </div>
     <form class="release-form">
         <div class="form-item">
-            <label class="required">需求类型</label>
+            <label class="required">服务类型</label>
             <div class="form-item__cont">
                 <div class="select xqlx">
                     <input placeholder="请选择" readonly @click="show1 = true" v-model="form.type" />
@@ -148,7 +175,9 @@
     </van-dialog>
 
 </div>
-
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
 <script>
     $(function () {
         new Vue({

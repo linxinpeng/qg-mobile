@@ -1,0 +1,26 @@
+.update-wrap{
+    padding: 0.2rem 0.4rem;
+}
+.form-item__left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 1.1rem;
+    border-bottom: 0.02rem solid #ededed;
+}
+.form-item__left label{
+    font-size: 0.29rem;
+    color: #999999;
+}
+.form-item__left-right{
+    font-size: 0.29rem;
+    font-weight: 500;
+    color: #333333;
+}
+.form-item__left-right input{
+    text-align: right;
+}
+.form-item__cont input{
+    height: 100%;
+    font-size: 0.29rem;
+}

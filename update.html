@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="这是网站的描述，填写有助于SEO" />
+    <meta name="keywords" content="这是网站关键词" />
+    <title>修改名片</title>
+    <script type="text/javascript" src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/commom.css">
+    <link rel="stylesheet" href="./css/update.css">
+    <link rel="stylesheet" href="./css/first-release-detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
+</head>
+
+<body>
+    <div id="update" class="update-wrap">
+        <form class="release-form">
+            <h3 class="special-title">基本信息</h3>
+            <div class="form-item__left">
+                <label>编辑头像</label>
+                <div class="form-item__left-right">
+                    <van-uploader v-model="form.userArt" :max-count="1" />
+                </div>
+            </div>
+            <div class="form-item__left">
+                <label>账号信息</label>
+                <div class="form-item__left-right">
+                    <input placeholder="账号信息" v-model="form.account" />
+                </div>
+            </div>
+            <div class="form-item__left" style="margin-bottom: 0.12rem;">
+                <label>认证情况</label>
+                <div class="form-item__left-right">
+                    <span style="color: #2EB79E;">去认证 ></span>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>姓名</label>
+                <div class="form-item__cont">
+                    <div class="select xm">
+                        <input placeholder="请输入姓名" v-model="form.name" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>所在地址</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请选择" readonly @click="show1 = true" v-model="form.addr" />
+                        <img src="./images/jtxx.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>所属行业</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请选择" readonly @click="show2 = true" v-model="form.belong" />
+                        <img src="./images/jtxx.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>联系方式<span>（联系电话、微信号、QQ至少填一项）</span> </label>
+                <div class="form-item__cont">
+                    <div class="form-contact">
+                        <div class="form-contact__item">
+                            <img src="./images/phone.png" />
+                            <input type="tel" v-model="form.phone" maxlength="11">
+                        </div>
+                        <div class="form-contact__item">
+                            <img src="./images/wx.png" />
+                            <input type="text" v-model="form.wechat">
+                        </div>
+                        <div class="form-contact__item">
+                            <img src="./images/qq.png" />
+                            <input type="tel" v-model="form.qq">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="special-title">职位信息</h3>
+            <div class="form-item" style="margin-top: 0.3rem;">
+                <label>公司名称</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请输入公司简称或品牌名称，如：青瓜传媒" v-model="form.companyName" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>公司品牌</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请输入公司简称或品牌名称，如：青瓜传媒" v-model="form.companyPp" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item" style="margin-top: 0.3rem;">
+                <label class="required">部门</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请输入部门" v-model="form.department" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="required">职位</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请输入职位" v-model="form.job" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="required">提供类型</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请选择提供类型" readonly @click="show1 = true" v-model="form.provideType" />
+                        <img src="./images/jtxx.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="required">需求类型</label>
+                <div class="form-item__cont">
+                    <div class="select">
+                        <input placeholder="请选择需求类型" readonly @click="show1 = true" v-model="form.needType" />
+                        <img src="./images/jtxx.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="required">公司介绍 </label>
+                <div class="form-item__cont">
+                    <div class="select xqms">
+                        <textarea v-model="form.desc"
+                            placeholder="为了提高合作对接的效率，请尽可能详细描述您的需求，包括但不限于项目背景、当前问题、其他个性化需求等。500字以内"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>公司logo<span>（最佳尺寸为200*200像素，大小限制800kb)</span> </label>
+                <div class="form-item__cont">
+                    <div class="form-item__upload">
+                        <van-uploader :max-count="1" :max-size="800" v-model="form.logo" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="form-item" style="padding-bottom: 0.2rem;">
+            <button class="form-submit" @click="handleRelease(form)">下一步</button>
+        </div>
+        <van-popup v-model="show1" position="bottom" :style="{ height: '30%' }">
+            <van-area title="选择所在地" :area-list="areaList" :columns-num="2" @cancel="show1 = false"
+                @confirm="handleChooseCity" />
+        </van-popup>
+
+        <van-popup v-model="show2" position="bottom" :style="{ height: '30%' }">
+            <van-picker title="所属行业" show-toolbar @cancel="show2 = false" @confirm="(val) => handleType('belong','show2',val)"
+                :columns="belong" />
+        </van-popup>
+
+        <van-popup v-model="show3" position="bottom" :style="{ height: '30%' }">
+            <van-picker title="提供类型" show-toolbar @cancel="show3 = false" @confirm="(val) => handleType('provideType','show3',val)"
+                :columns="provideType" />
+        </van-popup>
+
+        <van-popup v-model="show4" position="bottom" :style="{ height: '30%' }">
+            <van-picker title="需求类型" show-toolbar @cancel="show4 = false" @confirm="(val) => handleType('needType','show4',val)"
+                :columns="needType" />
+        </van-popup>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="./js/city.js"></script>
+<script>
+    $(function () {
+        const areas = areaList
+        new Vue({
+            el: '#update',
+            data: {
+                form: {
+                    userArt: [],
+                    account: '13554411122',
+                    hasRz: false, //是否认证
+                    name: '',
+                    addr: '',
+                    belong: '',
+                    phone: '',
+                    wechat: '',
+                    qq: '',
+                    companyName: '',
+                    companyPp: '', //公司品牌
+                    department: '',
+                    job: '',
+                    provideType: '',
+                    needType: '',
+                    desc: '',
+                    logo: []
+                },
+                show1: false,
+                show2: false,
+                show3: false,
+                show4: false,
+                areaList: areas,
+                belong:['互联网','金融行业'],
+                provideType:['类型一','类型二'],
+                needType:['需求一','需求二']
+            },
+            methods: {
+                handleChooseCity(val) {
+                    this.form.addr = val[0].name + ' ' + val[1].name;
+                    this.show1 = false
+                },
+                handleType(type, target, val) {
+                    this.form[type] = val;
+                    this[target] = false;
+                },
+                //表单验证
+                handleRelease(form){
+                    if(!form.department){
+                        this.$notify('请填写所在部门');
+                        return
+                    }
+                    if(!form.job){
+                        this.$notify('请填写职位');
+                        return
+                    }
+                    if(!form.provideType){
+                        this.$notify('请选择提供类型');
+                        return
+                    }
+                    if(!form.needType){
+                        this.$notify('请选择需求类型');
+                        return
+                    }
+                    if(!form.desc){
+                        this.$notify('请填写公司介绍');
+                        return
+                    }
+                    if(form.logo.length === 0){
+                        this.$notify('请上传公司logo');
+                        return
+                    }
+                    //表单验证通过 dosome
+                }
+            }
+        })
+    })
+</script>
