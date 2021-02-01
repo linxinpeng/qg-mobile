@@ -1,0 +1,92 @@
+.release{
+    padding: 0.3rem 0.4rem;
+}
+.top-notice{
+    height: 0.64rem;
+    background: #FFF0EF;
+    border-radius: 0.08rem;
+    border: 0.01rem solid #FFABA6;
+    font-size: 0.24rem;
+    color: #F01F14;
+    display: flex;
+    align-items: center;
+    padding-left: 0.24rem;
+    margin-bottom: 0.32rem;
+}
+.top-notice img{
+    width: 0.29rem;
+    margin-right: 0.16rem;
+}
+.relesae-form .layui-form-item{
+    margin-bottom: 0.2rem;
+}
+.relesae-form .layui-form-item .layui-form-label{
+    display: inline-block;
+    float: none;
+    font-size: 0.28rem;
+    font-weight: 500;
+    color: #333333;
+    width: auto;
+    position: relative;
+    padding: 0;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 0.20rem;
+}
+.required::before {
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: -0.2rem;
+    color: #FF3B30;
+    display: block;
+}
+.relesae-form .layui-form-item .layui-input-block{
+    margin-left: 0;
+    height: 0.8rem;
+    background: #F6F7F9;
+    display: flex;
+    align-items: center;
+}
+.relesae-form .layui-form-select{
+    width: 100%;
+}
+.relesae-form .layui-form-item .layui-input-block .layui-input,.relesae-form .layui-form-item .layui-input-block .layui-textarea{
+    color: rgba(51,51,51,1);
+    font-size: 0.32rem;
+    height: 0.6rem;
+    padding-left: 0.24rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.08rem;
+    width: 100%;
+    line-height: 1;
+} 
+.relesae-form .layui-form-select .layui-edge{
+    border-width: 0.1rem;
+    right: 0.12rem;
+    margin-top: -0.1rem;
+    border-top-color: rgb(107, 107, 107);
+}
+.relesae-form .layui-form-select dl {
+    top: 0.8rem;
+}
+.relesae-form .layui-form-select dl dd{
+    line-height: 0.48rem;
+    font-size: 0.28rem;
+    padding: 0 0.16rem;
+}
+.relesae-form .layui-form-checkbox{
+    padding-left: 0.3rem !important;
+}
+.relesae-form .layui-form-checkbox i{
+    width: 0.24rem !important;
+    height: 0.24rem !important;
+    line-height: 0.24rem !important;
+    font-size: 0.16rem !important;
+}
+.relesae-form .layui-form-checkbox span{
+    font-size: 0.24rem;
+    line-height: 0.3rem !important;
+    padding-right: 0.3rem;
+}
